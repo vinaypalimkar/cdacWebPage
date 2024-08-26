@@ -13,11 +13,20 @@ mongoose.connect('mongodb://localhost:27017/alumni', {
 
 // Define a simple User schema
 const userSchema = new mongoose.Schema({
-    username: String,
+    email: String,
     password: String
 });
 
 const User = mongoose.model('User', userSchema);
+
+// Define Feedback schema
+const feedbackSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    message: String
+});
+
+const Feedback = mongoose.model('Feedback', feedbackSchema);
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,33 +39,36 @@ app.get('/login.html', (req, res) => {
 
 // Registration route
 app.post('/register', async (req, res) => {
-    const { username, password } = req.body;
+    const { email, psw, pswRepeat } = req.body;
     
-    // Basic validation (you can enhance this as needed)
-    if (!username || !password) {
+    // Basic validation
+    if (!email || !psw || !pswRepeat) {
         return res.send('Please fill out all fields.');
+    }
+
+    if (psw !== pswRepeat) {
+        return res.send('Passwords do not match.');
     }
 
     try {
         // Check if user already exists
-        const existingUser = await User.findOne({ username });
+        const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.send('User already exists.');
         }
 
         // Create a new user
-        const newUser = new User({ username, password });
+        const newUser = new User({ email, password: psw });
         await newUser.save();
 
         // Redirect to login page after successful registration
         console.log('User registered successfully');
-        res.redirect('/login.html'); // Adjust this path if needed
+        res.redirect('/registered.html'); // Adjust this path if needed
     } catch (err) {
         console.error(err);
         res.status(500).send('Error registering user');
     }
 });
-
 
 // Login route
 app.post('/login', async (req, res) => {
@@ -69,30 +81,38 @@ app.post('/login', async (req, res) => {
 
     try {
         // Check if user exists
-        const user = await User.findOne({ username: email, password: psw });
+        const user = await User.findOne({ email, password: psw });
         if (!user) {
             return res.send('Invalid email or password.');
         }
 
         // Redirect to a success page or dashboard
         console.log('Logged in')
-        res.redirect('/index.html'); // Adjust this path if needed
+        res.redirect('/loggedin.html'); // Adjust this path if needed
     } catch (err) {
         console.error(err);
         res.status(500).send('Error logging in');
     }
 });
 
-app.get('/users', async (req, res) => {
+// Feedback route
+app.post('/feedback', async (req, res) => {
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+        return res.send('Please fill out all fields.');
+    }
+
     try {
-        const users = await User.find(); // Fetch all users
-        res.json(users); // Send users as JSON response
+        const newFeedback = new Feedback({ name, email, message });
+        await newFeedback.save();
+        console.log('Feedback received');
+        res.redirect('/thankyou.html');
     } catch (err) {
         console.error(err);
-        res.status(500).send('Error retrieving users');
+        res.status(500).send('Error submitting feedback');
     }
 });
-
 
 // Start the server
 app.listen(port, () => {

@@ -22,11 +22,11 @@
         </div>
 
         <!-- Header Right Section -->
-        <div class="header-right">
+        <!-- <div class="header-right">
             <div class="auth-links">
                 <a href="register.html">Register</a> <a href="login.html">Login</a>
             </div>
-        </div>        
+        </div>         -->
         
         <!-- Header Bottom Navigation -->
         <div class="header-bottom">
@@ -143,68 +143,77 @@
     </header>
     <main>        
         <section id="main-content">
-            <div class="content-box" id="testimonials">   
-                <div class="testimonial">
-                    <div class="row-test">
-                        <div class="container1">
-                            <div class="content1">
-                                <h2 class="title1">Supraja Mathapati</h2>
-                                <div class="details1">
-                                    <span class="rating1">PG-DAC</span>
-                                    <span class="quality1">HYD</span>
-                                    <span class="audio1">SDE</span>
-                                    <span class="date1">MAY 20, 2024</span>
-                                </div>
-                                <p class="description1">
-                                    "I transformed from a complete beginner to a confident developer thanks to this course! 
-                                    The instructors' guidance and the curriculum's structure helped me build a strong foundation in coding. 
-                                    Now, I'm excited to apply my new skills to real-world projects and take my career to the next level!"
-                                </p>
-                                <!-- <a href="#" class="play-button1">PLAY NOW</a> -->
-                            </div>
-                            <div class="video-container">
-                                <!-- Embed video iframe or video player for testimonial 4 -->
-                                <iframe src="https://www.youtube.com/embed/video_id_4" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                
-                </div>
+            <div class="content-box" id="registered">
+                    
+                <h2 style="text-align: center;">You have registered successfully, please login..</h2>
             </div>
-            <div class="content-box" id="testimonials">   
-                <div class="testimonial">
-                    <div class="row-test">
-                        <div class="container1">
-                            <div class="content1">
-                                <h2 class="title1">Supraja Mathapati</h2>
-                                <div class="details1">
-                                    <span class="rating1">PG-DAC</span>
-                                    <span class="quality1">HYD</span>
-                                    <span class="audio1">SDE</span>
-                                    <span class="date1">MAY 20, 2024</span>
-                                </div>
-                                <p class="description1">
-                                    "I transformed from a complete beginner to a confident developer thanks to this course! 
-                                    The instructors' guidance and the curriculum's structure helped me build a strong foundation in coding. 
-                                    Now, I'm excited to apply my new skills to real-world projects and take my career to the next level!"
-                                </p>
-                                <!-- <a href="#" class="play-button1">PLAY NOW</a> -->
-                            </div>
-                            <div class="video-container">
-                                <!-- Embed video iframe or video player for testimonial 4 -->
-                                <iframe src="https://www.youtube.com/embed/video_id_4" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
+            <div class="content-box" id="login-section">
+                <h3>Login - Signup to connect with people on our Alumni page</h3>
+                <form action="http://localhost:3000/login" method="post">
+                    <div class="log-in-container">
+                      <h1>Login</h1>
+                      <p>Log in to your account.</p>
+                      <hr>
+                  
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                  
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                      <hr>
+                      <button type="submit" class="loginbtn">Login</button>
+                      
                     </div>
+                    
+                    <div class="log-in-container signup">
+                      <p>Don't have an account? <a href="register.html">Register</a>.</p>
+                    </div>
+                </form>
+            </div>
+            <div class="content-box" id="social-login">
                 
-                </div>
+                <div class="social-container">
+                    <div class="row">
+                      <h2>Login with Social Media</h2>
+                  
+                      <div class="col">
+                        <a href="#" class="fb btn">
+                          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                        </a>
+                      </div>
+                  
+                      <div class="col">
+                        <a href="#" class="twitter btn">
+                          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                        </a>
+                      </div>
+                  
+                      <div class="col">
+                        <a href="#" class="google btn">
+                          <i class="fa fa-google fa-fw"></i> Login with Google+
+                        </a>
+                      </div>
+                  
+                    </div>
+                  </div>
+                  
+                  <div class="social-bottom-container">
+                    <div class="row">
+                      <div class="col">
+                        <a href="register.html" style="color:white" class="btn">Sign up</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" style="color:white" class="btn">Forgot password?</a>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </section>
     </main>
     <footer id="footer-wrapper">
         <div class="wrap">
             <div id="footer-links" class="footer-icons">
-                <a target="_blank" href="index.html"><i class="icon"></i><strong>CDAC Hyderabad</strong> </a> &nbsp;
+                <a target="_blank" href="#"><i class="icon"></i> CDAC Hyderabad</a> &nbsp;
                 <a target="_blank" href="https://www.facebook.com/CDACHYD/">
                     <i class="bi bi-facebook"></i>
                 </a> &nbsp;
@@ -232,7 +241,7 @@
         
         <div id="feedback-corner">
             <!-- Feedback Button -->
-            <a href="#" id="feedback" class="btn-success" style="color: aquamarine; background-color: black;">Feedback</a>
+            <a href="#" id="feedback" class=" btn-success" style="color: aquamarine; background-color: black;">Feedback</a>
         
             <!-- Feedback Modal -->
             <div id="feedback-modal" style="display: none;">
