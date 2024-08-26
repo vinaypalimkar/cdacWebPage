@@ -1,0 +1,863 @@
+/* Global Styles */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #744141f1;
+    background-color: #ffffff;
+}
+
+:root {
+    --primary-color: #9eb6a9; /* Define the primary color variable */
+}
+
+/* Header Section */
+#about-us {
+    background-color:  #ece7cf;
+}
+/* Header container styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #bea8a8; /* Set a background color for visibility */
+    color: #fff; /* Text color */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Logo styling */
+#logo {
+    flex: 1;
+}
+
+/* Register and Login section styling */
+#auth-links {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between links */
+}
+
+/* Auth links styling */
+#auth-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #0275d8; /* Blue background for buttons */
+}
+
+#auth-links a:hover {
+    background-color: #01447e; /* Darker blue on hover */
+}
+
+
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color); /* Use the variable */
+    padding: 10px;
+}
+
+.logo {
+    height: auto; /* Adjust height automatically */
+    max-width: 100%; /* Ensure the logo scales down if needed */
+    display: block; /* Remove any default inline spacing */
+}
+
+.header-right { 
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Navigation Bar */
+.header-bottom {
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-bottom a {
+    float: left;
+    font-size: 16px;
+    color: #f4fff1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    color: #dce0db;
+    padding: 14px 16px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Hover Effects */
+.header-bottom a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(155, 96, 47);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: rgb(85, 50, 27);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Container for the header, holding both logo and auth links */
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c2ebee;
+    padding: 10px;
+}
+
+.logo {
+    height: 70px;
+}
+
+.header-right { 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+}
+
+.auth-links a {
+    color: #000; /* Change to desired color */
+    text-decoration: none;
+    margin-left: 15px; /* Space between Register and Login */
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-right {
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px; /* Space between logo and auth links on small screens */
+        margin-left: 0; /* Reset left margin */
+    }
+
+    .auth-links a {
+        margin-left: 0;
+        margin-bottom: 10px; /* Space between Register and Login vertically */
+    }
+}
+
+main {
+  padding: 30px;
+}
+
+#main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Content Boxes */
+.content-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#welcome-note {
+  flex: 0 0 100%; /* Takes 70% width */
+  background-color: #eee;
+  text-align: center;
+}
+
+#login-section {
+  flex: 0 0 50%; /* Takes 25% width */
+  background-color: #eee;
+}
+
+/* Additional Content Boxes */
+#jobs {
+  flex: 0 0 100%; /* Takes 60% width */
+  background-color: #f0f0f0;
+}
+
+#news {
+  flex: 0 0 100%; /* Takes 35% width */
+  background-color: #f0f0f0;
+}
+
+#testimonials {
+  flex: 0 0 100%; /* Takes 95% width */
+  background-color: #f0f0f0;
+}
+
+#latest-members {
+  flex: 0 0 100%; /* Takes 95% width */
+  background-color: #f0f0f0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #welcome-note, #login-section, #jobs, #news-updates, #testimonials, #latest-members {
+    flex: 0 0 100%; /* Stacks all boxes vertically */
+  }
+}
+
+/* Footer container styles */
+footer {
+    background-color: #333; /* Set a background color for visibility */
+    color: #fff; /* Text color */
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Footer links styling */
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #afffaf;
+}
+
+/* Social media icons styling */
+.footer-icons i {
+    font-size: 20px; /* Adjust size of icons if needed */
+    margin-right: 10px; /* Space between icons */
+}
+.footer-icons a {
+    color: #ca7f1c; /* Ensure social media link color is white */
+    text-decoration: none; /* Remove underline from social media links */
+}
+/* Feedback corner */
+#feedback-corner {
+    position: absolute; /* Position relative to the footer */
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Feedback Button */
+#feedback {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background-color: black;
+    color: aquamarine;
+    padding: 4px 4px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#feedback:hover {
+    background-color: #333;
+}
+
+/* Modal Container */
+#feedback-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    z-index: 1000; /* Ensure it sits on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Allow scrolling if needed */
+    background-color: rgba(0,0,0,0.4); /* Semi-transparent background */
+    padding-top: 60px; /* Padding from the top */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Centered and with some top margin */
+    padding: 50px;
+    border: 1px solid #888;
+    width: 90%; /* Adjust width */
+    max-width: 600px; /* Set maximum width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow for better visibility */
+    overflow: hidden; /* Hide content overflow */
+}
+
+/* Modal Header */
+.modal-content h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Modal Paragraph */
+.modal-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for input fields and button */
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.submit-button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.submit-button:hover {
+    opacity: 1;
+}
+
+
+footer {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Style for the content box containing the welcome note */
+.content-box {
+    background-color: #fff; /* White background for the content box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the content box */
+    margin: 20px auto; /* Centered with margin */
+    max-width: 1200px; /* Max width of the content box */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Heading for the welcome note */
+#welcome-note h2 {
+    font-size: 24px; /* Font size for the heading */
+    color: #333; /* Dark grey color for text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Container for the entire slider */
+/* Container for the entire slider */
+.slider {
+    position: relative;
+    overflow: hidden; /* Hide overflow to ensure slides are confined */
+    max-width: 100%; /* Full width of its container */
+    height: 400px; /* Set a fixed height, adjust as needed */    
+}
+
+/* Slider container holding all slides */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+    width: 100%; /* Full width of the slider container */
+    height: 100%;
+}
+
+/* Individual slide */
+.slide {
+    flex: 0 0 100%; /* Make each slide take up full width */
+    background-size: cover; /* Cover the entire slide area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repetition of the background image */
+    height: 100%; /* Full height of the slider container */
+    position: relative; /* Positioning context for captions */
+}
+
+/* Styling for captions and links */
+.slide-caption-bg {
+    position: absolute;
+    bottom: 20px; /* Position at the bottom */
+    left: 20px; /* Position from the left */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.slide-caption {
+    color: white; /* Text color for the caption */
+}
+
+.slide-title {
+    font-size: 18px; /* Font size for the title */
+    font-weight: bold;
+}
+
+/* Arrows for sliding */
+.slider-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-arrow {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation dots */
+.slide-nav-wrap {
+    position: absolute;
+    bottom: 10px; /* Positioned at the bottom */
+    width: 100%;
+    text-align: center;
+}
+
+.slider-nav {
+    display: inline-block;
+}
+
+.slider-nav__item {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-nav__item--current {
+    background: white; /* Active slide indicator */
+}
+
+/* Add responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .slider {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+
+.sign-up-container, .log-in-container {
+    padding: 16px;
+    background-color: white;
+    
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    box-sizing: border-box;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .registerbtn, .loginbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover, .loginbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "log in" section */
+  .login, .register{
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  
+  /* style the container */
+.social-container {
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+  } 
+  
+  /* style the form and buttons */
+  form {
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0px;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; /* remove underline from anchors */
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  
+  /* add appropriate colors to fb, twitter and google buttons */
+  .fb {
+    background-color: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background-color: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+  
+  /* bottom container */
+  .social-bottom-container {
+    text-align: center;
+    background-color: #666;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+  }
+  
+  .social-bottom-container a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    
+  }
+  
+  .social-bottom-container a:hover {
+    background-color: #444;
+  }
+  
+  /* Responsive layout */
+  @media screen and (max-width: 650px) {
+    .social-container {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 650px) {
+    #social-login {
+      height: 50%;
+    }
+  }
+
+  /* contact-us */
+
+  #contact-us {
+    flex: 0 0 70%;
+    padding: 20px;
+    background-color: #ece7cf;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#contact-us .card-body {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#contact-us h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #b96239;
+}
+
+#contact-us p {
+    margin: 5px 0;
+}
+
+#contact-us .maps1 {
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#contact-us iframe {
+    border: 0;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* courses */
+#course {
+    flex: 0 0 20%; /* Takes 50% width */
+    background-color: #ece7cf;
+    justify-content: left;
+    color: #b96239;
+  }
+
+  .courses ul {
+    list-style-type: disc; /* Uses default bullet points */
+    padding-left: 20px; /* Adds padding to align the list with the text */
+    margin: 0; /* Removes any default margins */
+}
+
+.courses li {
+    text-align: left; /* Aligns text to the left */
+    margin-bottom: 8px; /* Adds space between list items */
+    font-size: 16px; /* Optional: adjusts font size */
+    color: #333; /* Optional: sets text color */
+}
+
+#latest-members {
+    /* Your existing styles for content boxes */
+     /* Adjust as needed */
+    flex: 0 0 100%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.members-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Align items horizontally centered */
+    
+}
+
+.member-info {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #774b3ab9;
+}
+
+.member-info h4 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.member-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.linkedin-icon {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+@media (max-width: 1200px) {
+    .members-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .members-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .members-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .members-list {
+        grid-template-columns: 1fr;
+    }
+}
+#latest-members .members-list {
+    transition: transform 0.5s;
+}
+
+#latest-members .member-list:hover {
+    transform: scale(1.1);
+}
+
+/* news */
+#news-updates {
+    /* Your existing styles for content boxes */
+    height: 350px; /* Adjust as needed */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #706a6ab0;
+    border-radius: 5px;
+    padding: 10px;
+    border-style: outset;
+    background-color: #eee;
+}
+
+.scroll-container {
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+.scroll-content {
+    display: inline-flex;
+    animation: scrollLeft 10s linear infinite;
+}
+
+@keyframes scrollLeft {
+    100% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+.news-item {
+    position: relative;
+    height: 300px;
+    width: 300px; /* Adjust width as needed */
+    margin-right: 20px; /* Spacing between news items */
+    background-color: #d8ccb6b9;
+}
+
+.news-item img {
+    width: 100%;
+    display: block;
+}
+
+.news-text {
+    position: absolute;
+    
+    bottom: 10px;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
